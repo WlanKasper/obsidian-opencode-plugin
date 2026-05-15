@@ -240,8 +240,6 @@ class OpenCodeLinksGraphSettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
 
-    new Setting(containerEl).setName("OpenCode Links Graph").setHeading();
-
     new Setting(containerEl)
       .setName("OpenCode link regex")
       .setDesc("Regex used to find OpenCode links. The default matches @.opencode/...md.")
