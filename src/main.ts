@@ -45,7 +45,7 @@ export default class OpenCodeLinksGraphPlugin extends Plugin {
 
     this.addSettingTab(new OpenCodeLinksGraphSettingTab(this.app, this));
     this.addCommand({
-      id: "refresh-opencode-links-graph",
+      id: "refresh-links",
       name: "Refresh OpenCode graph links",
       callback: () => this.refreshNow(true),
     });
@@ -68,7 +68,8 @@ export default class OpenCodeLinksGraphPlugin extends Plugin {
   }
 
   async loadSettings(): Promise<void> {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    const data = (await this.loadData()) as Partial<OpenCodeLinksGraphSettings> | null;
+    this.settings = { ...DEFAULT_SETTINGS, ...data };
   }
 
   async saveSettings(): Promise<void> {
@@ -239,7 +240,7 @@ class OpenCodeLinksGraphSettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
 
-    containerEl.createEl("h2", { text: "OpenCode Links Graph" });
+    new Setting(containerEl).setName("OpenCode Links Graph").setHeading();
 
     new Setting(containerEl)
       .setName("OpenCode link regex")
