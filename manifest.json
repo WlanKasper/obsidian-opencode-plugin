@@ -1,10 +1,10 @@
 {
   "id": "opencode-links-graph",
   "name": "OpenCode Links Graph",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "minAppVersion": "1.5.0",
-  "description": "Treat raw @.opencode/... Markdown references as internal Obsidian links for the native graph view.",
+  "description": "Treat raw Opencode Markdown references (@.opencode/...) as internal links for the native graph view.",
   "author": "Artur Smirnov",
-  "authorUrl": "",
+  "authorUrl": "https://github.com/WlanKasper",
   "isDesktopOnly": false
 }

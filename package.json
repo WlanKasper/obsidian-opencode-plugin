@@ -1,6 +1,6 @@
 {
   "name": "obsidian-opencode-links-graph",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Obsidian plugin that makes raw @.opencode/... references visible as native graph edges.",
   "main": "main.js",
   "scripts": {
